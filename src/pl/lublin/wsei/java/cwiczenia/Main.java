@@ -13,7 +13,7 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        //tabelka(10);
+
         // to jest komentarz jednolinikjowy
         /* to jest
             komentarz
@@ -61,7 +61,8 @@ public class Main {
 //            System.out.printf("%d\t%f\t\n", i, Math.sin(i / 360.0 * 2 * Math.PI));
 
         //Punkt 7h
-    //tabelka(10); - to jest wywolanie zadania 7h, odkomentować zeby dzialalo
+    //tabelka(10);
+    //to jest wywolanie zadania 7h, odkomentować zeby dzialalo
 
         //Punkt 8
 //        Scanner input = new Scanner(System.in);
@@ -98,14 +99,27 @@ public class Main {
 //            System.out.printf("Wynik dodawania %d + %d = %d%n", num1, num2, num1 + num2);
 //        } while (true);
 
-        //Punkt 10
+        //Punkt 10b
+
+    Scanner input = new Scanner(System.in);
+    int num;
+    System.out.print("Podaj liczbę: ");
+    num = input.nextInt();
+        System.out.println("DEC = " +num);
+        System.out.println("BIN = " +Integer.toBinaryString(num));
+        System.out.println("HEX = " +Integer.toHexString(num));
 
 
 
 
 
-
-
+    }
+    //Punkt 10c
+    public static String leftPad(String aText, char aChar, int aWidth){
+        String res = aText;
+        for (int i = 0; i < aWidth - aText.length(); i++)
+            res = aChar + res;
+        return res;
     }
 }
 
